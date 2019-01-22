@@ -20,6 +20,10 @@ router.post('/save', function(req, res) {
 
   var data = req.body;
 
+  var sql = `insert into table(name, date) values('${data.name}', '${data.date}')`;
+
+  // execute sql here
+
   data.all = data.user + ':' + data.password;
 
   // todo save the data in the database
